@@ -1,0 +1,7 @@
+*.d
+*.o
+*.bin
+*.dis
+*.elf
+*.patt
+*.vmem
