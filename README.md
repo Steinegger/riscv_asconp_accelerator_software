@@ -1,5 +1,5 @@
 This repo is part of the [Ascon-p Accelerator Meta Repo](https://github.com/Steinegger/riscv_asconp_accelerator) and holds the RISC-V proof-of-concept assembly implementation utilizing the Ascon-p instruction for Ascon, Ascon-Hash as well as the ISAP-rk function.  
-The code can be run on the (enhanced cv32e40p RISC-V processor)[https://github.com/Steinegger/riscv_asconp_accelerator_core] or the [functional isa-sim model](https://github.com/Steinegger/riscv_asconp_accelerator_isa_sim).  
+The code can be run on the [enhanced cv32e40p RISC-V processor](https://github.com/Steinegger/riscv_asconp_accelerator_core) or the [functional isa-sim model](https://github.com/Steinegger/riscv_asconp_accelerator_isa_sim).  
 
 # Structure
 
