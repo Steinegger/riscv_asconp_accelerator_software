@@ -23,11 +23,11 @@ This repo includes several different implemenations of Ascon and Ascon Hash that
  + isap/*: ISAP Opt32 reference implemenation in the same benchmarking setting as the Ascon implementation for comparision
 
 **Misc**  
-ascon/main.c: The default main-file to run and evaluate the selected implementation.
-ascon/performance_main.c: Runs the encryption for a number of different lengths for AD and M and prints the resulting runtime as a CSV.
-ascon/performance_hash_main.c: Runs the hash for a number of different lengths for AD and M and prints the resulting runtime as a CSV.
-include/: holds routines, defines and types used for both implementations
-common/util.c: holds the implementation for some custom printf like functions to output text on a custom asic testbench. If a different method for output is desired these funtions need to be reimplemented.
+ + ascon/main.c: The default main-file to run and evaluate the selected implementation.
+ + ascon/performance_main.c: Runs the encryption for a number of different lengths for AD and M and prints the resulting runtime as a CSV.
+ + ascon/performance_hash_main.c: Runs the hash for a number of different lengths for AD and M and prints the resulting runtime as a CSV.
+ + include/: holds routines, defines and types used for both implementations
+ + common/util.c: holds the implementation for some custom printf like functions to output text on a custom asic testbench. If a different method for output is desired these funtions need to be reimplemented.
 
 # Instructions
 As a prerequisit you need a compiled RISC-V toolchain in your path.
@@ -38,10 +38,10 @@ make all MAINFILE=main.c ASCON_CFLAGS="-DMULTIROUND_CONF=1 -DRISCY_HIGH_PERFORMA
 ```
 **MAINFILE** an be used to specify the file with the main() function.  
 **ASCON_CFLAGS** allows to specify the paramaters of the underlying hardware implementation.  
-**ASCON_INSTR** can be 0, 1 or 2. 0 compiles for a CPU without the Ascon-p hardware instruction, 1 results in assembly implemenations. 2 for the reference software implemenation, but with a replaces round-function
-**LITTLE_ENDIAN_CONF** can be 0 or 1. If 0 the endian swap needs to be done in software, 1 specifies that the hardware performs the endianess swap during the Ascon-p instruction
-**MULTIROUND_CONF** specifies how many rounds of Ascon-p can be performed in hardware in a single cycle (range 0 to 8).
-**RISCY_HIGH_PERFORMANCE**: Utilizes hardware loops and load increment instructions of the cv32e40p processor to further increase the performance.
+**ASCON_INSTR** can be 0, 1 or 2. 0 compiles for a CPU without the Ascon-p hardware instruction, 1 results in assembly implemenations. 2 for the reference software implemenation, but with a replaces round-function  
+**LITTLE_ENDIAN_CONF** can be 0 or 1. If 0 the endian swap needs to be done in software, 1 specifies that the hardware performs the endianess swap during the Ascon-p instruction  
+**MULTIROUND_CONF** specifies how many rounds of Ascon-p can be performed in hardware in a single cycle (range 0 to 8).  
+**RISCY_HIGH_PERFORMANCE**: Utilizes hardware loops and load increment instructions of the cv32e40p processor to further increase the performance.  
 **PERFORMANCE_TEST**: Allows to include more than one implementation in the binary (if set to 1), but reduces load time because of the larger binary size.  
 
 ## Spike
