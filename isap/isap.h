@@ -40,7 +40,7 @@ void isap_rk(
 	const unsigned char *iv,
 	const unsigned char *in,
 	unsigned char *out,
-	const unsigned long outlen);
+	const unsigned char outlen);
 
 void isap_enc(
 	const unsigned char *k,
